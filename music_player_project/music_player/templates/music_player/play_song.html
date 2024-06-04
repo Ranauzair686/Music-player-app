@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Song</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        audio {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ song.title }}</h1>
+    <p>Artist: {{ song.artist }}</p>
+    <p>Album: {{ song.album }}</p>
+    <audio controls>
+        <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
